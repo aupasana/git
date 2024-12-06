@@ -1,0 +1,14 @@
+body {
+    background-color: #FFFFFF; /* Set background color to white */
+    font-family: "Siddhanta-cakravat1", "Noto Sans";
+  }
+
+ol.toc li { list-style-type: none; margin: 0; padding: 0; }
+
+#TOC ul {
+  list-style-type:none;
+  }
+
+.subtitle {
+  font-size:small;
+}
