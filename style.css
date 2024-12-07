@@ -1,6 +1,7 @@
 body {
     background-color: #FFFFFF; /* Set background color to white */
-    font-family: "Siddhanta-cakravat1", "Noto Sans";
+    font-family: "Siddhanta-cakravat", "Bookerly";
+    text-align: center;
   }
 
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }
@@ -9,6 +10,18 @@ ol.toc li { list-style-type: none; margin: 0; padding: 0; }
   list-style-type:none;
   }
 
+h1 h2 {
+  font-size: large;
+  font-weight: bold;
+}
+
 .subtitle {
-  font-size:small;
+  font-size: medium;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.chandas {
+  font-style: italic;
+  text-decoration: underline;
 }
