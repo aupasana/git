@@ -1,7 +1,7 @@
 body {
     background-color: #FFFFFF; /* Set background color to white */
     /* font-family: "Siddhanta-cakravat", "Bookerly"; */
-    text-align: center;
+    /*text-align: center;*/
   }
 
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }
