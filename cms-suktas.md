@@ -1,5 +1,5 @@
----
-css: style.css
+﻿---
+css: suktas.css
 title: test
 subtitle: तपोवनषट्कसहितः
 author: अजितकृष्णः
