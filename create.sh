@@ -5,12 +5,13 @@ pdf_params="--paper-size=a6 --pdf-page-margin-left=5 --pdf-page-margin-right=5 -
 
 
 echo Creating devanagari files
-pandoc ${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=siddhanta-cakravat.ttf 
+pandoc ${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=fonts/siddhanta-cakravat.ttf 
 pandoc ${file_base}.md -o epub/${file_base}-devanagari.html --toc 
 
 ebook-convert epub/${file_base}.epub epub/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Siddhanta-cakravat
+# ebook-convert epub/${file_base}.epub epub/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Sanskrit2003
 
-return
+# return
 
 echo Creating IAST
 sanscript  -i ${file_base}.md --from devanagari --to iast -o tmp/${file_base}-iast.md
