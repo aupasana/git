@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 file_base=${1:r}
-pdf_params="--paper-size=a6 --pdf-page-margin-left=5 --pdf-page-margin-right=5 --pdf-page-margin-top=25 --pdf-page-margin-bottom=25"
+pdf_params="--paper-size=a5 --pdf-page-margin-left=36 --pdf-page-margin-right=36 --pdf-page-margin-top=36 --pdf-page-margin-bottom=36 --pdf-page-numbers"
 
 echo Formatting spacing
 cp ${1} tmp/${1}
@@ -16,12 +16,14 @@ ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf 
 
 # ebook-convert epub/${file_base}.epub epub/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Sanskrit2003
 
-return
 
-echo Creating Grantha
-sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
-pandoc tmp/${file_base}-grantha.md -o epub/${file_base}-grantha.epub --toc --epub-embed-font=fonts/NotoSerifGrantha-Regular.ttf
-ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Noto Serif Grantha"
+# echo Creating Grantha
+# sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
+# pandoc tmp/${file_base}-grantha.md -o epub/${file_base}-grantha.epub # --toc --epub-embed-font=fonts/NotoSerifGrantha-Regular.ttf
+#ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Noto Sans Grantha"
+# ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Sampradaya"
+
+return
 
 
 

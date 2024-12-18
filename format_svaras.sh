@@ -13,6 +13,10 @@ perl -i -pe 's//॑/g' ${1}
 # non-standard gum
 perl -i -pe 's//ꣳ/g' ${1}
 
+# dirgha to double single svaritas
+# perl -i -pe 's/᳚/॑॑/g' ${1}
+
+
 ###
 ### The following use glyphs from the private font use area
 ### and don't work on a kindle. You can enable them for pdfs.

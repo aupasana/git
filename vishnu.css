@@ -1,7 +1,7 @@
 body {
     background-color: #FFFFFF; /* Set background color to white */
-    font-family: "Sanskrit2003";
-    /*text-align: center;*/
+    /*font-family: "Sanskrit2003";*/
+    text-align: center;
   }
 
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }

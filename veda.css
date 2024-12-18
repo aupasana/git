@@ -14,14 +14,20 @@ ol.toc li { list-style-type: none; margin: 0; padding: 0; }
   text-align: left;
 }
 
-h1 h2 {
+.title .h1 .h2 {
   font-size: large;
   font-weight: bold;
+  text-align: center;
 }
 
 .reference {
   font-size: medium;
   font-weight: bold;
   text-decoration: underline;
+}
+
+.vidhi {
+  font-size: x-small;
+  line-height: 150%;
 }
 
