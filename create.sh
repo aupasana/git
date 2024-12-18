@@ -9,16 +9,22 @@ cp ${1} tmp/${1}
 
 echo Creating devanagari files
 pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=fonts/siddhanta-cakravat.ttf 
-
 ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Siddhanta-cakravat
+
 # ebook-convert epub/${file_base}.epub epub/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Sanskrit2003
+
+echo Creating Grantha
+sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
+pandoc tmp/${file_base}-grantha.md -o epub/${file_base}-grantha.epub --toc --epub-embed-font=fonts/NotoSerifGrantha-Regular.ttf
+ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Noto Serif Grantha"
+
+
+return
 
 echo Creating IAST
 sanscript -i tmp/${file_base}.md --from devanagari --to iast -o tmp/${file_base}-iast.md
 pandoc tmp/${file_base}-iast.md -o epub/${file_base}-iast.epub --toc 
 ebook-convert epub/${file_base}-iast.epub pdf/${file_base}-iast.pdf $=pdf_params
-
-return
 
 echo Creating Kannada
 sanscript -i tmp/${file_base}.md --from devanagari --to kannada -o tmp/${file_base}-kannada.md
