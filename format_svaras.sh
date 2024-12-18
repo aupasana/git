@@ -1,8 +1,13 @@
 
 #!/bin/zsh
 
+# anudatta before non-standard anusvara
 perl -i -pe 's/॒/॒/g' ${1}
 
+# non-standard anusvara
 perl -i -pe 's//ं/g' ${1}
+
+# non-standard svarita
+perl -i -pe 's//॑/g' ${1}
 
 
