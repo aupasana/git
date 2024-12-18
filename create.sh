@@ -8,11 +8,11 @@ cp ${1} tmp/${1}
 ./format_lines.sh tmp/${1}
 
 echo Creating devanagari files
-pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=fonts/siddhanta-cakravat.ttf 
-pandoc tmp/${file_base}.md -o epub/${file_base}-kindle.epub
+# pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=fonts/siddhanta-cakravat.ttf 
+pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub
 
 ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Siddhanta-cakravat
-ebook-convert epub/${file_base}-kindle.epub epub/${file_base}-kindle.azw3
+# ebook-convert epub/${file_base}-kindle.epub epub/${file_base}-kindle.azw3
 
 # ebook-convert epub/${file_base}.epub epub/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Sanskrit2003
 
