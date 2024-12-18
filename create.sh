@@ -13,13 +13,14 @@ ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf 
 
 # ebook-convert epub/${file_base}.epub epub/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Sanskrit2003
 
+return
+
 echo Creating Grantha
 sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
 pandoc tmp/${file_base}-grantha.md -o epub/${file_base}-grantha.epub --toc --epub-embed-font=fonts/NotoSerifGrantha-Regular.ttf
 ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Noto Serif Grantha"
 
 
-return
 
 echo Creating IAST
 sanscript -i tmp/${file_base}.md --from devanagari --to iast -o tmp/${file_base}-iast.md
