@@ -1,6 +1,6 @@
 ---
 css: suktas.css
-title: Suktas - Udaka
+title: Suktas - Taittiriya
 author: अजितकृष्णः
 date: २०२४-१२-१७
 ---
