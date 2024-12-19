@@ -35,3 +35,7 @@ h1 h2 {
   line-height: 150%;
   font-style: italic;
 }
+
+.transliterated {
+  font-size: small;
+}
