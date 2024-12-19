@@ -10,7 +10,16 @@ cp ${1} tmp/${1:t}
 
 echo Creating devanagari files
 # pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=fonts/siddhanta-cakravat.ttf 
-pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub
+
+echo Running pandoc
+echo .
+
+pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --filter ./hx_iast.py
+
+echo Pandoc complete
+echo .
+
+
 
 ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Siddhanta-cakravat
 # ebook-convert epub/${file_base}-kindle.epub epub/${file_base}-kindle.azw3
