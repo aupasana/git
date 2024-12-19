@@ -29,3 +29,9 @@ h1 h2 {
   font-style: italic;
   text-decoration: underline;
 }
+
+.vidhi {
+  font-size: small;
+  line-height: 150%;
+  font-style: italic;
+}
