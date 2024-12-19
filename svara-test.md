@@ -1,6 +1,6 @@
 ---
 css: suktas.css
-title: swara test file
+title: swara test file 2
 author: अजितकृष्णः
 date: 2024-12-19
 ---
@@ -53,6 +53,15 @@ date: 2024-12-19
 - saH'' - सः॑॑
 - saH" - सः᳚
 
+## end svaras
+
+- sarva"m - सर्व᳚म्
+- sarva''m - सर्व॑॑म्
+- sarvam" - सर्वम्᳚
+- sarvam'' - सर्वम्॑॑
+- praukSha'n - प्रौक्ष॑न्
+- praukShan' - प्रौक्षन्॑
+
 ## private area
 
 - .gm_ - 
@@ -64,7 +73,41 @@ date: 2024-12-19
 - .gg" - 
 
 
+# Phrases
 
+saM te_ payaa.gm'si -
+सं ते॒ पयाꣳ॑सि ॥
+
+madhu'maa_.gm_ adaa"bhyaH -
+मधु॑मा॒ꣳ॒ अदा᳚भ्यः॥
+
+shravaa.gg'syutta_maani' -
+श्रवाꣴ॑स्युत्त॒मानि॑॥
+
+jyotI_ShyApo_ yajU_.gg_ShyaapaH' -
+ज्योती॒ꣴ॒ष्यापो॒ यजू॒ꣴ॒ष्यापः॑
+
+pu_ShpiNIH" -
+पु॒ष्णिणीः᳚॥
+
+ba_rShiShi_ praukShan' - 
+ब॒र्हिषि॒ प्रौक्षन्॑ 
+
+sarvam" - 
+सर्वम्᳚
+
+## Search test
+
+- taittiriya 
+- taittirīya
+- rk samhita
+- r̥k saṁhitā
+- purusha sukta
+- puruṣa sūkta
+- shri sukta
+- śrī sūkta
+- rudra prashna
+- rudra praśna
 
 
 

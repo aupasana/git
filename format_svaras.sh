@@ -1,6 +1,10 @@
 
 #!/bin/zsh
 
+#####
+##### Replace glyphs from private use areas
+#####
+
 # anudatta before non-standard anusvara
 perl -i -pe 's/॒/॒/g' ${1}
 
@@ -13,29 +17,26 @@ perl -i -pe 's//॑/g' ${1}
 # non-standard gum
 perl -i -pe 's//ꣳ/g' ${1}
 
-# dirgha to double single svaritas
-# perl -i -pe 's/᳚/॑॑/g' ${1}
+####
+####  Format .gm and .gg properly
+####
 
+perl -i -pe 's/ँ॒/॒ꣳ॒/g' ${1}
 
-###
-### The following use glyphs from the private font use area
-### and don't work on a kindle. You can enable them for pdfs.
-###
+perl -i -pe 's/ँ॑/ꣳ॑/g' ${1}
 
-# use .gm swaras from private area
-# perl -i -pe 's/ँ/ꣳ/g' ${1}
-# perl -i -pe 's/ँ॑//g' ${1}
-# perl -i -pe 's/ꣳ॒/॒/g' ${1}
-# perl -i -pe 's/ꣳ᳚//g' ${1}
+perl -i -pe 's/ँ᳚/ꣳ᳚/g' ${1}
 
-# use .ggm swaras from private area
-# perl -i -pe 's/॑ꣴ//g' ${1}
-# perl -i -pe 's/᳚ꣴ//g' ${1}
-# perl -i -pe 's/॒ꣴ/॒/g' ${1}
+perl -i -pe 's/॑ꣴ/ꣴ॑/g' ${1}
 
-# remove duplicates
-# perl -i -pe 's/॑॑/॑/g' ${1}
-# perl -i -pe 's/᳚᳚/᳚/g' ${1}
+perl -i -pe 's/॒ꣴ/॒ꣴ॒/g' ${1}
 
+perl -i -pe 's/᳚ꣴ/ꣴ᳚/g' ${1}
+
+perl -i -pe 's/ँ/ꣳ/g' ${1}
+
+####
+#### Don't show properly on kindle
+####
 
 
