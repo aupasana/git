@@ -6,7 +6,7 @@ pdf_params="--paper-size=a5 --pdf-page-margin-left=36 --pdf-page-margin-right=36
 
 echo Formatting spacing
 cp ${1} tmp/${1:t}
-./format_lines.sh tmp/${1}
+./format_lines.sh tmp/${1:t}
 
 echo Creating devanagari files
 # pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=fonts/siddhanta-cakravat.ttf 
