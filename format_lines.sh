@@ -11,3 +11,5 @@ perl -i -pe 'BEGIN{undef $/;} s/([^\n])\n/$1  \n/smg' ${1}
 
 #echo Adding trailing spaces after EOL puncuation
 #perl -i -pe 'BEGIN{undef $/;} s/([-।॥,])\n([^\n])/$1  \n$2/smg' ${1}
+
+echo Exiting format_lines.sh

@@ -1,10 +1,11 @@
 #!/bin/zsh
 
 file_base=${1:r}
+file_base=${file_base:t}
 pdf_params="--paper-size=a5 --pdf-page-margin-left=36 --pdf-page-margin-right=36 --pdf-page-margin-top=36 --pdf-page-margin-bottom=36 --pdf-page-numbers"
 
 echo Formatting spacing
-cp ${1} tmp/${1}
+cp ${1} tmp/${1:t}
 ./format_lines.sh tmp/${1}
 
 echo Creating devanagari files

@@ -1,5 +1,5 @@
 #!/bin/zsh
 
-cp ${1} epub/${1}
-./format_svaras epub/${1}
-./create.sh epub/${1}
+cp ${1} tmp/${1}
+./format_svaras.sh tmp/${1}
+./create.sh tmp/${1}
