@@ -25,8 +25,6 @@ ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf 
 
 return
 
-
-
 echo Creating IAST
 sanscript -i tmp/${file_base}.md --from devanagari --to iast -o tmp/${file_base}-iast.md
 pandoc tmp/${file_base}-iast.md -o epub/${file_base}-iast.epub --toc 
@@ -42,3 +40,7 @@ sanscript -i tmp/${file_base}.md --from devanagari --to telugu -o tmp/${file_bas
 pandoc tmp/${file_base}-telugu.md -o epub/${file_base}-telugu.epub --toc 
 ebook-convert epub/${file_base}-telugu.epub pdf/${file_base}-telugu.pdf $=pdf_params
 
+echo Creating Malayalam
+sanscript -i tmp/${file_base}.md --from devanagari --to malayalam -o tmp/${file_base}-malayalam.md
+pandoc tmp/${file_base}-malayalam.md -o epub/${file_base}-malayalam.epub --toc 
+ebook-convert epub/${file_base}-malayalam.epub pdf/${file_base}-malayalam.pdf $=pdf_params
