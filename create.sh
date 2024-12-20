@@ -2,6 +2,7 @@
 
 file_base=${1:r}
 file_base=${file_base:t}
+
 pdf_params="--paper-size=a5 --pdf-page-margin-left=36 --pdf-page-margin-right=36 --pdf-page-margin-top=36 --pdf-page-margin-bottom=36 --pdf-page-numbers"
 
 echo Formatting spacing
@@ -9,14 +10,19 @@ cp ${1} tmp/${1:t}
 ./format_lines.sh tmp/${1:t}
 
 echo Creating devanagari files
-pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --filter ./hx_iast.py
-# pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub --toc --epub-embed-font=fonts/siddhanta-cakravat.ttf 
+
+# generate table of contents
+# --toc
+
+# take headers and also include transliterated text
+# --filter ./hx_iast.py
+
+# embed the font in the epub
+# --epub-embed-font=fonts/siddhanta-cakravat.ttf 
+
+pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub
 
 ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Siddhanta-cakravat
-# ebook-convert epub/${file_base}-kindle.epub epub/${file_base}-kindle.azw3
-
-# ebook-convert epub/${file_base}.epub epub/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Sanskrit2003
-
 
 # echo Creating Grantha
 # sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
