@@ -1,49 +1,56 @@
 
 #!/bin/zsh
 
+re_options="-i -pe"
 #####
 ##### Replace glyphs from private use areas
 #####
 
-# anudatta before non-standard anusvara
-perl -i -pe 's/॒/॒/g' ${1}
+
+perl $re_options 's/॒ः/ः॒/g' ${1}
+
+perl $re_options 's/᳚/॑॑/g' ${1}
+
+# anudatta before non-standard anusvaraperl ${re_options} 's/॒/॒/g' ${1}
 
 # non-standard anusvara
-perl -i -pe 's//ं/g' ${1}
+perl $re_options 's//ं/g' ${1}
 
 # non-standard svarita
-perl -i -pe 's//॑/g' ${1}
+perl $re_options 's//॑/g' ${1}
 
 # non-standard gum
-perl -i -pe 's//ꣳ/g' ${1}
-perl -i -pe 's//ꣳ/g' ${1}
+perl $re_options 's//ꣳ/g' ${1}
+perl $re_options 's//ꣳ/g' ${1}
 
 # non-standard H
-perl -i -pe 's//ः' ${1}
+perl $re_options 's//ः/' ${1}
 
 ####
 ####  Format .gm and .gg properly
 ####
 
-perl -i -pe 's/ँ॒/॒ꣳ॒/g' ${1}
+perl $re_options 's/ँ॒/॒ꣳ॒/g' ${1}
 
-perl -i -pe 's/ँ॑/ꣳ॑/g' ${1}
+perl $re_options 's/ँ॑/ꣳ॑/g' ${1}
 
-perl -i -pe 's/ँ᳚/ꣳ᳚/g' ${1}
+perl $re_options 's/ँ॑/ꣳ॑/g' ${1}
 
-perl -i -pe 's/॑ꣴ/ꣴ॑/g' ${1}
+perl $re_options 's/ँ᳚/ꣳ᳚/g' ${1}
 
-perl -i -pe 's/॒ꣴ/॒ꣴ॒/g' ${1}
+perl $re_options 's/॑ꣴ/ꣴ॑/g' ${1}
 
-perl -i -pe 's/᳚ꣴ/ꣴ᳚/g' ${1}
+perl $re_options 's/॒ꣴ/॒ꣴ॒/g' ${1}
 
-perl -i -pe 's/ँ/ꣳ/g' ${1}
+perl $re_options 's/᳚ꣴ/ꣴ᳚/g' ${1}
+
+perl $re_options 's/ँ/ꣳ/g' ${1}
 
 ####
 #### Format H properly
 
-perl -i -pe 's/॑ः/ः॑/g' ${1}
-perl -i -pe 's/।/।/g' {1}
+perl $re_options 's/॑ः/ः॑/g' ${1}
+perl $re_options 's/।/।/g' ${1}
 ####
 
 ####
