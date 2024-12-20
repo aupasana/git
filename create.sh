@@ -24,13 +24,8 @@ pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub
 
 # --embed-all-fonts 
 # --embed-font-family=Siddhanta-cakravat
-ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params 
 
-# echo Creating Grantha
-# sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
-# pandoc tmp/${file_base}-grantha.md -o epub/${file_base}-grantha.epub # --toc --epub-embed-font=fonts/NotoSerifGrantha-Regular.ttf
-#ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Noto Sans Grantha"
-# ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Sampradaya"
+ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params 
 
 return
 
@@ -53,3 +48,10 @@ echo Creating Malayalam
 sanscript -i tmp/${file_base}.md --from devanagari --to malayalam -o tmp/${file_base}-malayalam.md
 pandoc tmp/${file_base}-malayalam.md -o epub/${file_base}-malayalam.epub --toc 
 ebook-convert epub/${file_base}-malayalam.epub pdf/${file_base}-malayalam.pdf $=pdf_params
+
+# echo Creating Grantha
+# sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
+# pandoc tmp/${file_base}-grantha.md -o epub/${file_base}-grantha.epub # --toc --epub-embed-font=fonts/NotoSerifGrantha-Regular.ttf
+#ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Noto Sans Grantha"
+# ebook-convert epub/${file_base}-grantha.epub pdf/${file_base}-grantha.pdf $=pdf_params --embed-all-fonts --embed-font-family="Sampradaya"
+
