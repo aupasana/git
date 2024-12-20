@@ -43,9 +43,6 @@ foreach my $line (@lines) {
     # --- Replace order
     # ---    
 
-    # # non-standard .gm
-    # # $line =~ s/\x{E004}/\x{A8F3}/g;
-
     # # non-standard visarga
     # $line =~ s/\x{E003}/\x{0903}/g;
 
@@ -54,7 +51,7 @@ foreach my $line (@lines) {
 
     # # non-standard dirgha svarita to to svaritas
     # $line =~ s/\x{F176}/\x{0951}\x{0951}/g;
-    $line =~ s/\x{F202}/\x{0951}\x{0951}/g;
+    # $line =~ s/\x{F202}/\x{0951}\x{0951}/g;
 
     # # non-standard dirgha svarita to to svaritas
     # $line =~ s/\x{F204}/\x{A8F4}/g;
@@ -70,6 +67,9 @@ foreach my $line (@lines) {
 
     # # anudatta + .gm => anudatta + .gm + anudatta
     # $line =~ s/\x{0952}\x{A8F3}/\x{0952}\x{A8F3}\x{0952}/g;
+
+    # .gm with svarita (private) => .gm + svarita
+    $line =~ s/\x{E004}/\x{A8F3}\x{0951}/g;
 
     # # de-dupe anudattas
     # $line =~ s/\x{0952}\x{0952}/\x{0952}/g;
