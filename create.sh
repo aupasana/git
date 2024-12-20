@@ -22,7 +22,7 @@ echo Creating devanagari files
 
 pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub
 
-ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params --embed-all-fonts --embed-font-family=Siddhanta-cakravat
+ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params #--embed-all-fonts --embed-font-family=Siddhanta-cakravat
 
 # echo Creating Grantha
 # sanscript -i tmp/${file_base}.md --from devanagari --to grantha -o tmp/${file_base}-grantha.md
