@@ -10,3 +10,7 @@ Instructions below are for Macs and assume you have `homebrew` and `python` inst
   - `pip install indic-transliteration` 
 - `pandocfilters` will be used for post-processing of headings
   - `pip install pandocfilters`
+
+
+Folder layout
+- Create empty
