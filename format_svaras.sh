@@ -16,6 +16,7 @@ perl -i -pe 's//॑/g' ${1}
 
 # non-standard gum
 perl -i -pe 's//ꣳ/g' ${1}
+perl -i -pe 's//ꣳ/g' ${1}
 
 # non-standard H
 perl -i -pe 's//ः' ${1}
