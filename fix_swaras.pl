@@ -43,32 +43,35 @@ foreach my $line (@lines) {
     # --- Replace order
     # ---    
 
-    # non-standard visarga
-    $line =~ s/\x{E003}/\x{0903}/g;
+    # non-standard .gm
+    $line =~ s/\x{E004}/\x{A8F3}/g;
 
-    # non-standard anudatta
-    $line =~ s/\x{F1A2}/\x{0952}/g;
+    # # non-standard visarga
+    # $line =~ s/\x{E003}/\x{0903}/g;
 
-    # non-standard dirgha svarita to to svaritas
-    $line =~ s/\x{F176}/\x{0951}\x{0951}/g;
+    # # non-standard anudatta
+    # $line =~ s/\x{F1A2}/\x{0952}/g;
 
-    # non-standard dirgha svarita to to svaritas
-    $line =~ s/\x{F204}/\x{A8F4}/g;
+    # # non-standard dirgha svarita to to svaritas
+    # $line =~ s/\x{F176}/\x{0951}\x{0951}/g;
 
-    # standard dirgha svarita to to svaritas
-    $line =~ s/\x{1CDA}/\x{0951}\x{0951}/g;
+    # # non-standard dirgha svarita to to svaritas
+    # $line =~ s/\x{F204}/\x{A8F4}/g;
 
-    # anudatta + visarga => visarga + anudatta
-    $line =~ s/\x{0952}\x{0903}/\x{0903}\x{0952}/g;
+    # # standard dirgha svarita to to svaritas
+    # $line =~ s/\x{1CDA}/\x{0951}\x{0951}/g;
 
-    # svarita + visarga => visarga + swarita
-    $line =~ s/\x{0951}\x{0903}/\x{0903}\x{0951}/g;
+    # # anudatta + visarga => visarga + anudatta
+    # $line =~ s/\x{0952}\x{0903}/\x{0903}\x{0952}/g;
 
-    # anudatta + .gm => anudatta + .gm + anudatta
-    $line =~ s/\x{0952}\x{A8F3}/\x{0952}\x{A8F3}\x{0952}/g;
+    # # svarita + visarga => visarga + swarita
+    # $line =~ s/\x{0951}\x{0903}/\x{0903}\x{0951}/g;
 
-    # de-dupe anudattas
-    $line =~ s/\x{0952}\x{0952}/\x{0952}/g;
+    # # anudatta + .gm => anudatta + .gm + anudatta
+    # $line =~ s/\x{0952}\x{A8F3}/\x{0952}\x{A8F3}\x{0952}/g;
+
+    # # de-dupe anudattas
+    # $line =~ s/\x{0952}\x{0952}/\x{0952}/g;
 
 
 }
