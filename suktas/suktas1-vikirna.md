@@ -1,5 +1,5 @@
 ---
-css: suktas.css
+css: suktas/suktas.css
 title: Suktas - Vikirna
 author: अजितकृष्णः
 date: २०२४-१२-१७
