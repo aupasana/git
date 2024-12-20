@@ -1,5 +1,5 @@
 ---
-css: suktas.css
+css: suktas/suktas.css
 title: test-svaras 003
 author: अजितकृष्णः
 date: 2024-12-19
