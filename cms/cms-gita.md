@@ -1,6 +1,6 @@
 ---
-css: gita.css
-title: भगवद्गीता 2
+css: cms/cms-gita.css
+title: भगवद्गीता
 subtitle: तपोवनषट्कसहितः
 author: चिन्मयालयः
 date: 2024-12-18

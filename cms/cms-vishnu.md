@@ -1,6 +1,6 @@
 ---
-css: vishnu.css
-title: विष्णुसहस्रनाम 2
+css: cms/cms-vishnu.css
+title: विष्णुसहस्रनाम
 author: चिन्मयालयः
 date: 2024-12-18
 ---
