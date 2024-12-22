@@ -35,11 +35,13 @@ foreach my $line (@lines) {
     # $line =~ s/। /।/g;
     # $line =~ s/॥ /॥/g;
 
-    # Run once
-    $line =~ s/।([^ ])/। $1/g;
-    $line =~ s/॥([^ ])/॥ $1/g;
-    $line =~ s/  / /g;
+    # # Space after dandas
+    # $line =~ s/।([^ ])/। $1/g;
+    # $line =~ s/॥([^ ])/॥ $1/g;
+    # $line =~ s/  / /g;
 
+    # no space before numbers
+    $line =~ s/([।॥]) ([०-९])/$1$2/g;
 
     # ---    
     # --- Fix Ajit's old typesetting workarounds
