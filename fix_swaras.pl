@@ -36,8 +36,9 @@ foreach my $line (@lines) {
     # $line =~ s/॥ /॥/g;
 
     # Run once
-    # $line =~ s/।(.+)$/। $1/g;
-    # $line =~ s/॥(.+)$/॥ $1/g;
+    $line =~ s/।([^ ])/। $1/g;
+    $line =~ s/॥([^ ])/॥ $1/g;
+    $line =~ s/  / /g;
 
 
     # ---    
