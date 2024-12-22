@@ -30,10 +30,15 @@ foreach my $line (@lines) {
     # --- sanskritdocument.org formatting
     # ---    
 
-    $line =~ s/ ।/।/g;
-    $line =~ s/ ॥/॥/g;
-    $line =~ s/। /।/g;
-    $line =~ s/॥ /॥/g;
+    # $line =~ s/ ।/।/g;
+    # $line =~ s/ ॥/॥/g;
+    # $line =~ s/। /।/g;
+    # $line =~ s/॥ /॥/g;
+
+    # Run once
+    $line =~ s/।$/। /g;
+    $line =~ s/॥$/॥ /g;
+
 
     # ---    
     # --- Fix Ajit's old typesetting workarounds

@@ -5,11 +5,18 @@ file_base=${file_base:t}
 
 cp ${1} tmp/${1:t}
 
-echo calling ./format_svaras.sh tmp/${1:t}
-./format_svaras.sh tmp/${1:t}
+echo The value of 2 is {$2}
 
-echo calling ./format_lines.sh tmp/${1:t}
-./format_lines.sh tmp/${1:t}
+if [ -z "$2" ]; then
+  echo calling ./format_lines.sh tmp/${1:t}
+  ./format_lines.sh tmp/${1:t}
+else
+  echo "Skipping formatting"
+fi
+
+  echo calling ./format_svaras.sh tmp/${1:t}
+  ./format_svaras.sh tmp/${1:t}
+
 
 # return 
 
