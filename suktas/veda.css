@@ -14,9 +14,14 @@ ol.toc li { list-style-type: none; margin: 0; padding: 0; }
   text-align: left;
 }
 
-h1 h2 {
+title h1 h2 date author {
   font-size: large;
   font-weight: bold;
+  text-align: center;
+}
+
+.title .date .author {
+  text-align: center;
 }
 
 .subtitle {
