@@ -1,5 +1,5 @@
 ---
-css: cms/cms-gita.css
+css: stotra/stotra.css
 title: भगवद्गीता
 subtitle: तपोवनषट्कसहितः
 author: चिन्मयालयः

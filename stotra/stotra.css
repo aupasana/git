@@ -4,6 +4,10 @@ body {
     text-align: center;
   }
 
+.date {
+  font-size: small;
+}
+
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }
 
 #TOC ul {
@@ -22,10 +26,5 @@ h1 h2 {
 .subtitle {
   font-size: medium;
   font-weight: bold;
-  text-decoration: underline;
-}
-
-.chandas {
-  font-style: italic;
   text-decoration: underline;
 }

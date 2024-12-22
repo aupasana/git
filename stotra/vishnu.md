@@ -1,5 +1,5 @@
 ---
-css: cms/cms-vishnu.css
+css: stotra/stotra.css
 title: विष्णुसहस्रनाम
 author: चिन्मयालयः
 date: 2024-12-18
