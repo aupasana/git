@@ -1,5 +1,5 @@
 ---
-css: suktas/suktas.css
+css: suktas/veda.css
 title: तैत्तिरीय-ब्राह्मण
 author: अजितकृष्णः
 date: २०२४-१२-१७
