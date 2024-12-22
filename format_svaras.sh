@@ -46,6 +46,10 @@ perl $re_options 's/᳚ꣴ/ꣴ᳚/g' ${1}
 
 perl $re_options 's/ँ/ꣳ/g' ${1}
 
+### Remove duplicats
+perl $re_options 's/॒॒/॒/g' ${1}
+
+
 ####
 #### Format H properly
 
