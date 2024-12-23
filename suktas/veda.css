@@ -13,7 +13,7 @@ ol.toc li { list-style-type: none; margin: 0; padding: 0; }
   text-align: left;
 }
 
-title, h1, h2, date, author {
+title, h1, h2, .date, .author, .h1, .h2, .h3 {
   font-size: large;
   font-weight: bold;
   text-align: center;
