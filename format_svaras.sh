@@ -38,7 +38,8 @@ perl $re_options 's/ँ॑/ꣳ॑/g' ${1}
 
 perl $re_options 's/ँ᳚/ꣳ᳚/g' ${1}
 
-perl $re_options 's/॑ꣴ/ꣴ॑/g' ${1}
+# not always correct
+# perl $re_options 's/॑ꣴ/ꣴ॑/g' ${1}
 
 perl $re_options 's/॒ꣴ/॒ꣴ॒/g' ${1}
 

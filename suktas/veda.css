@@ -1,7 +1,6 @@
 body {
     background-color: #FFFFFF; /* Set background color to white */
     font-family: "Siddhanta-cakravat";
-    text-align: left;
   }
 
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }
@@ -14,13 +13,9 @@ ol.toc li { list-style-type: none; margin: 0; padding: 0; }
   text-align: left;
 }
 
-title h1 h2 date author {
+title, h1, h2, date, author {
   font-size: large;
   font-weight: bold;
-  text-align: center;
-}
-
-.title .date .author {
   text-align: center;
 }
 
@@ -39,6 +34,12 @@ title h1 h2 date author {
   font-size: small;
   line-height: 150%;
   font-style: italic;
+}
+
+.vedaref{
+  font-size: small;
+  font-style: italic;
+  text-align: center;
 }
 
 .transliterated {
