@@ -1,5 +1,5 @@
 ---  
-css: cms/cms-puja.css
+css: stotra/stotra.css
 title: लघुपूजापद्धतिः
 author: चिन्मयालयः Seattle
 date: 2024-12-18

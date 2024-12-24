@@ -1,7 +1,12 @@
 body {
     background-color: #FFFFFF; /* Set background color to white */
     font-family: "Siddhanta-cakravat";
+    /* letter-spacing: .1rem; */
   }
+
+/* .space {
+  letter-spacing: .2rem;
+} */
 
 ol.toc li { list-style-type: none; margin: 0; padding: 0; }
 

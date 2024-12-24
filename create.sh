@@ -25,7 +25,7 @@ pandoc tmp/${file_base}.md -o epub/${file_base}-devanagari.epub
 # --embed-all-fonts 
 # --embed-font-family=Siddhanta-cakravat
 
-ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params 
+ebook-convert epub/${file_base}-devanagari.epub pdf/${file_base}-devanagari.pdf $=pdf_params # --embed-font-family=Adishila
 
 return
 
